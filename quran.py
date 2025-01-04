@@ -4,7 +4,6 @@ import plotly.express as px
 import numpy as np
 from pygame import mixer
 from streamlit.components.v1 import html
-import clipboard
 
 
 st.set_page_config(layout='wide', page_title = 'قرءاني')
@@ -365,7 +364,7 @@ elif mode == 'teachAya':
 -
 {tafsir}
                 '''
-        clipboard.copy(text)
+        # clipboard.copy(text)
 
     st.divider()
     c1,c2, c3, c4= st.columns((20,20,20,10))
