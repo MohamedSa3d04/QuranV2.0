@@ -7,7 +7,7 @@ from streamlit.components.v1 import html
 import pyperclip
 
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide', page_title = 'قرءاني')
 with open('Style.css') as Style:
     st.markdown(f'<style>{Style.read()}</style>', unsafe_allow_html=True)
 
@@ -35,7 +35,7 @@ if mode == 'reading':
         Easy = sb.selectbox('حدد نوع الإختبار : ',['سهل','صعب'], on_change=t)
         Easy = True if Easy == 'سهل' else False
 
-    sb.markdown("Made with [Eng/Mohamed Saad](https://www.facebook.com/profile.php?id=61557483869983):heart_eyes:")
+    sb.markdown("Made with [Eng/Mohamed Saad](https://www.linkedin.com/in/ibnsa3d/):heart_eyes:")
 
     st.markdown(f"<p style='margin : -38px 0px; font-size:50px; font-family : Arabic Typesetting; color:#86EE7C;  direction: rtl;'>اسم السورة : {suraname}</p>", unsafe_allow_html=True)
     suraNumber = df[df['sura_name_ar'] == suraname]['sura_no'].values[0]
